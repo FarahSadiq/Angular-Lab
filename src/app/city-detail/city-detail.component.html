@@ -1,0 +1,8 @@
+<div *ngIf="city">
+    <h2>{{city.name | uppercase}} Details</h2>
+    <div>id: {{city.id}}</div>
+    <div>
+      <label for="city-name">City name: </label>
+      <input id="city-name" [(ngModel)]="city.name" placeholder="name">
+    </div>
+  </div>
