@@ -7,12 +7,14 @@ import { CitiesComponent } from './cities/cities.component';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { CityDetailComponent } from './city-detail/city-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesComponent,
-    CityDetailComponent
+    CityDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
