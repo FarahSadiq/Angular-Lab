@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { CityDetailComponent } from './city-detail/city-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NgFor,
     NgIf
   ],
-  providers: [],
+  providers: [ importProvidersFrom(HttpClientModule),],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
